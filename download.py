@@ -52,7 +52,7 @@ for url in sys.argv[1:]:
     check_if_item = re.findall(
         "^http(s?):.+\/jspui\/handle\/[\d\.]+\/[\d\.]+$", url)
     check_if_search = re.findall(
-        "^http(s?):.+\/jspui\/simple-search\?(.+)(query=(.+))(.+)$", url)
+        "^http(s?):.+\/jspui\/simple-search\?(query=(.+))$", url)
 
     if not url.startswith(DSPACE_STEM):
         print("Error: Invalid URL format")
